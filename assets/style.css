@@ -36,6 +36,7 @@ html {
     width: 300px;
     margin: 6px 8px;
     padding: 2px 24px;
+    border: 1px solid black;
 }
 
 .jobItem {
@@ -43,6 +44,7 @@ html {
     width: 32px;
     margin: 12px 0;
 }
+
 
 h1 {
     text-align: center;
