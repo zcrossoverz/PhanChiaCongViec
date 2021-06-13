@@ -26,19 +26,22 @@ html {
 
 #container {
     padding: 32px 24px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .job, .user{
     display: block;
-    max-width: 100px;
+    width: 300px;
     margin: 6px 8px;
+    padding: 2px 24px;
 }
 
 .jobItem {
-    width: 120px;
-    padding: 12px 12px;
-
+    height: 20px;
+    width: 32px;
+    margin: 12px 0;
 }
 
 h1 {
@@ -74,7 +77,9 @@ h1 {
 #content_popup {
     padding: 0 4px 8px 4px;
 }
-
+#method {
+    display: none;
+}
 .bttn-default {
   color: #fff;
 }
