@@ -133,6 +133,12 @@ h1 {
   border-radius: 50%;
   box-shadow: 0 5px 5px rgba(0,0,0,0.3);
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .act span {
