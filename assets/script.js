@@ -26,7 +26,13 @@ function c(e){
         users.push(e);
     } 
 }
-
+function cx(e,i){
+    let ts = document.createTextNode(e+' - '+i);
+    let dc = document.createElement('p');
+    dc.className = 'Item';
+    dc.appendChild(ts);
+    rs.appendChild(dc);
+}
 document.querySelector('#submit_popup').addEventListener('click',()=>{
     c(inp.value);
     inp.value = '';
@@ -64,27 +70,16 @@ start.addEventListener('click',()=>{
     if(users.length >= jobs.length){
         while(jobs.length>0){
             let x = Math.floor(Math.random()*users.length);
-            result[jobs.pop()] = users[x];
+            cx(users[x],jobs.pop());
             users.splice(x,1);
         }
     }else{
         while(users.length>0){
             let x = Math.floor(Math.random()*jobs.length);
-            result[users.pop()] = jobs[x];
+            cx(users.pop(),jobs[x]);
             jobs.splice(x,1);
         }
     }
-    // result.forEach((e,i)=>{
-    //     let ts = document.createTextNode(e+' - '+i);
-    //     let dc = document.createElement('p');
-    //     dc.className = 'Item';
-    //     dc.appendChild(ts);
-    //     rs.appendChild(dc);
-    //     console.log(e+i);
-    // });
-    result.forEach((e,i)=>{
-        console(e+i);
-    });
     document.querySelector('#result').classList.toggle('active');
     document.querySelector('#container').classList.toggle('notactive');
 });
