@@ -29,20 +29,64 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
 }
 
-.job, .user{
+#container.notactive {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#result {
+    padding: 32px 24px;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#result.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.results {
     display: block;
-    width: 300px;
+    min-width: 300px;
     margin: 6px 8px;
     padding: 2px 24px;
     border: 1px solid black;
+    border-radius: 8px;
+
 }
 
-.jobItem {
+
+
+.job, .user{
+    display: block;
+    min-width: 300px;
+    margin: 6px 8px;
+    padding: 2px 24px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.Item {
     height: 20px;
-    width: 32px;
+    min-width: 200px;
     margin: 12px 0;
+    border: 1px solid red;
 }
 
 
@@ -68,10 +112,6 @@ h1 {
     margin: 0 12px;
 }
 
-#n, #nguoi {
-    margin: 0 12px;
-}
-
 #title_popup {
     padding: 0 4px 12px 4px;
 }
@@ -89,7 +129,7 @@ h1 {
   left: 50px;
   width: 45px;
   height: 45px;
-  background: red;
+  background: #fc5c9c;
   border-radius: 50%;
   box-shadow: 0 5px 5px rgba(0,0,0,0.3);
   cursor: pointer;
@@ -101,6 +141,7 @@ h1 {
   height: 100%;
   display: flex;
   align-items: center;
+  color: #fcefee;
   font-size: 1.5em;
   font-weight: 600;
   justify-content: center;
@@ -116,7 +157,7 @@ h1 {
   bottom: 55px;
   min-width: 230px;
   padding: 20px;
-  background: #ccc;
+  background: #fccde2;
   border-radius: 20px;
   opacity: 0;
   visibility: hidden;
@@ -135,6 +176,7 @@ h1 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  color: #0e153a;
   padding: 10px 0;
   transition: 0.3s;
 }
@@ -152,6 +194,12 @@ h1 {
   padding: 0 5px 0 0;
 }
 
+#footer {
+  justify-content: center;
+  right: 60px;
+  bottom: 30px;
+  position: absolute;
+}
 .bttn-default {
   color: #fff;
 }
