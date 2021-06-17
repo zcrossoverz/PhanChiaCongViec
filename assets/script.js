@@ -8,6 +8,7 @@ const title_popup = document.querySelector('#title_popup');
 const content_popup = document.querySelector('#content_popup');
 const method = document.querySelector('#method');
 const inp = document.querySelector('#inp');
+const act = document.querySelector('#act');
 function c(e){
     let textnode = document.createTextNode(e);
     let temp = document.createElement('p');
@@ -21,6 +22,9 @@ document.querySelector('#submit_popup').addEventListener('click',()=>{
     c(inp.value);
     popup.style = 'display:none';
     main.style = 'display:block';
+});
+act.addEventListener('click', ()=>{
+    act.classList.toggle('active');
 });
 let cancer = ()=>{
     document.querySelector('#cancer_popup').addEventListener('click',()=>{

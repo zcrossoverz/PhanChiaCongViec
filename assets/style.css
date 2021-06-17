@@ -28,7 +28,7 @@ html {
     padding: 32px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .job, .user{
@@ -82,6 +82,76 @@ h1 {
 #method {
     display: none;
 }
+
+.act {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 45px;
+  height: 45px;
+  background: red;
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.act span {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.act:hover span {
+  transform: rotate(135deg);
+}
+
+.act ul {
+  position: absolute;
+  bottom: 55px;
+  min-width: 230px;
+  padding: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.act.active ul {
+  bottom: 65px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+
+.act ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  transition: 0.3s;
+}
+
+.act ul li:hover,
+.act ul li:hover i {
+  font-weight: 600;
+}
+
+.act ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.act ul i {
+  padding: 0 5px 0 0;
+}
+
 .bttn-default {
   color: #fff;
 }
